@@ -80,3 +80,24 @@ if re.match(pattern,email):
 else:
     print("Invalid Email")
 ###################################################################
+import nltk
+from nltk import CFG
+from nltk.parse import RecursiveDescentParser
+
+grammar = CFG.fromstring("""
+S -> NP VP
+NP -> Det N
+VP -> V NP
+Det -> 'the' | 'an'
+N -> 'boy' | 'apple'
+V -> 'eats'
+""")
+
+parser = RecursiveDescentParser(grammar)
+
+sentence = "the boy eats an apple".split()
+
+for tree in parser.parse(sentence):
+    print(tree)
+    tree.pretty_print()
+#################################################################
