@@ -26,3 +26,12 @@ filtered_tokens = [word for word in tokens
                    if word.lower() not in stop_words]
 print(filtered_tokens)
 ############################################################
+############################################################3
+stemming
+###########################################################
+from nltk.stem import PorterStemmer
+stemmer = PorterStemmer()
+words = ["running", "eating", "swimming"]
+stemmed_words = [stemmer.stem(word) for word in words]
+print(stemmed_words)
+#############################################################
