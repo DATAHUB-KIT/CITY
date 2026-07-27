@@ -57,3 +57,15 @@ tokens = word_tokenize("This is a sample sentence.")
 pos_tags = pos_tag(tokens)
 print(pos_tags)
 ################################################
+import nltk
+from nltk import pos_tag, ne_chunk
+from nltk.tokenize import word_tokenize # Download the required resources
+nltk.download('words')
+nltk.download('maxent_ne_chunker')
+nltk.download('averaged_perceptron_tagger') # Download the 'maxent_ne_chunker_tab' resource
+nltk.download('maxent_ne_chunker_tab') # This line is crucial to fix the error.
+tokens = word_tokenize("John works at Google in New York.")
+pos_tags = pos_tag(tokens)
+ner_tags = ne_chunk(pos_tags)
+print(ner_tags)
+############################################################
