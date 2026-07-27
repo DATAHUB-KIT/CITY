@@ -69,3 +69,14 @@ pos_tags = pos_tag(tokens)
 ner_tags = ne_chunk(pos_tags)
 print(ner_tags)
 ############################################################
+import re
+
+email = "student@gmail.com"
+
+pattern = r'^[A-Za-z0-9._%+-]+@[A-Za-z0-9.-]+\.[A-Za-z]{2,}$'
+
+if re.match(pattern,email):
+    print("Valid Email")
+else:
+    print("Invalid Email")
+###################################################################
