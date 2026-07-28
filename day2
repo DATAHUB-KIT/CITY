@@ -120,3 +120,18 @@ Completely dissatisfied 😒. The phone freezes frequently and the battery life 
 Poor quality keyboard 😕. Several keys stopped working after a month.
 Waste of money 👎. The product arrived damaged and customer support was unhelpful.
 ######################################################################################
+import re
+
+sentence = input("Enter a sentence: ")
+
+# Pattern to identify mathematical expressions
+pattern = r'\d+\s*[\+\-\*/]\s*\d+'
+
+expressions = re.findall(pattern, sentence)
+
+if expressions:
+    print("Mathematical Expression(s) Found:")
+
+else:
+    print("No mathematical expression found")
+##################################################################nd.")
