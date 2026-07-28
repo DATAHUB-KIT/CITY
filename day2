@@ -96,3 +96,27 @@ for review, sentiment in zip(test_reviews, predictions):
     print("Review :", review)
     print("Sentiment :", sentiment)
     print()
+###########################################################################
+Positive Sentences (10)
+I really love this laptop 😊. Excellent battery!!! Worth every penny.
+I absolutely love this phone 😍!!! The camera is amazing... Worth every ₹.
+This smartwatch is fantastic ⌚😊. The display is crystal clear and the battery lasts for days.
+Amazing headphones 🎧❤️. The sound quality is incredible and very comfortable to wear.
+I am extremely happy with this tablet 😄. Fast performance and beautiful screen.
+Best purchase ever 👍. The laptop is super fast and works perfectly for my projects.
+This speaker is awesome 🔊😍! Powerful bass and excellent sound quality.
+Great value for money 💯. The phone runs smoothly and takes stunning photos.
+Highly recommended 😊. The keyboard feels premium and typing is very comfortable.
+Excellent product 🌟. Easy to use, reliable, and exceeded all my expectations.
+Negative Sentences (10)
+I really hate this laptop 😞. The battery drains so fast!!! Total waste of money.
+This phone is terrible 😡. The camera quality is disappointing... Not worth the ₹.
+Very disappointed with this smartwatch 😔. It stopped working after one week.
+Worst headphones ever 😠. The sound is poor and they hurt my ears.
+The tablet is extremely slow 😤. Apps keep crashing all the time.
+I regret buying this laptop 😢. It overheats within minutes of use.
+This speaker is awful 🔇. The audio is distorted even at low volume.
+Completely dissatisfied 😒. The phone freezes frequently and the battery life is horrible.
+Poor quality keyboard 😕. Several keys stopped working after a month.
+Waste of money 👎. The product arrived damaged and customer support was unhelpful.
+######################################################################################
