@@ -1,0 +1,7 @@
+!pip install emoji
+import emoji
+text = "I like action shoes 👍 "
+# Convert emojis to text
+text = emoji.demojize(text)
+text = emoji.replace_emoji(text, replace="")
+  ###############################################################
