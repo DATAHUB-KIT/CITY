@@ -12,3 +12,22 @@ soup = BeautifulSoup(text, "html.parser")
 clean_text = soup.get_text() 
 print(clean_text)
 ####################################################
+from sklearn.feature_extraction.text import TfidfVectorizer
+import pandas as pd
+
+corpus = [
+    "Machine learning is amazing",
+    "Machine learning uses Python",
+    "Python is useful for AI"
+]
+
+vectorizer = TfidfVectorizer()
+
+tfidf = vectorizer.fit_transform(corpus)
+
+df = pd.DataFrame(
+    tfidf.toarray(),
+    columns=vectorizer.get_feature_names_out()
+)
+
+print(df)
