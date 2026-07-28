@@ -31,3 +31,68 @@ df = pd.DataFrame(
 )
 
 print(df)
+###############################################
+from sklearn.feature_extraction.text import TfidfVectorizer
+from sklearn.naive_bayes import MultinomialNB
+
+# -------------------------
+# Training Data
+# -------------------------
+
+reviews = [
+    "I love this movie",
+    "This is an excellent product",
+    "Amazing experience",
+    "I hate this movie",
+    "Very bad service",
+    "Worst product ever"
+]
+
+labels = [
+    "Positive",
+    "Positive",
+    "Positive",
+    "Negative",
+    "Negative",
+    "Negative"
+]
+
+# -------------------------
+# Convert Text to TF-IDF
+# -------------------------
+
+vectorizer = TfidfVectorizer()
+
+X = vectorizer.fit_transform(reviews)
+
+# -------------------------
+# Train Model
+# -------------------------
+
+model = MultinomialNB()
+
+model.fit(X, labels)
+
+# -------------------------
+# Test Reviews
+# -------------------------
+
+test_reviews = [
+    "Excellent movie",
+    "Bad product",
+    "Amazing service",
+    "Worst movie"
+]
+
+test_vector = vectorizer.transform(test_reviews)
+
+predictions = model.predict(test_vector)
+
+# -------------------------
+# Display Results
+# -------------------------
+
+for review, sentiment in zip(test_reviews, predictions):
+    print("Review :", review)
+    print("Sentiment :", sentiment)
+    print()
