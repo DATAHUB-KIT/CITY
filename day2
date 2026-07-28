@@ -4,6 +4,7 @@ text = "I like action shoes 👍 "
 # Convert emojis to text
 text = emoji.demojize(text)
 text = emoji.replace_emoji(text, replace="")
+print(text)
   ###############################################################
 from bs4 import BeautifulSoup 
 text = "<p>This is a <b>sample</b> text.</p>" 
