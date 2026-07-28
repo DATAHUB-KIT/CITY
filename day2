@@ -135,3 +135,10 @@ if expressions:
 else:
     print("No mathematical expression found")
 ##################################################################nd.")
+import re
+email = input("Enter Email Address: ")
+
+pattern = r'([A-Za-z0-9._%+-]+)@([A-Za-z0-9.-]+)\.([A-Za-z]{2,})'
+
+match = re.match(pattern, email)
+
