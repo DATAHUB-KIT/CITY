@@ -17,3 +17,37 @@ classifier = pipeline("zero-shot-classification")
 text = "                "
 candidate_labels = [             ]
 classifier(text, candidate_labels)
+#######################################################################
+from transformers import pipeline
+
+# Configure and load the model only once
+qa_pipeline = pipeline(
+    task="question-answering",
+    model="distilbert-base-cased-distilled-squad"
+)
+
+# Context can be reused for multiple questions
+context = """
+
+"""
+
+# Question 1
+result1 = qa_pipeline(
+    question="    ",
+    context=context
+)
+print(result1["answer"])
+
+# Question 2
+result2 = qa_pipeline(
+    question="    ",
+    context=context
+)
+print(result2["answer"])
+
+# Question 3
+result3 = qa_pipeline(
+    question="   ",
+    context=context
+)
+print(result3["answer"])
