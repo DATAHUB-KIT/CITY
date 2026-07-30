@@ -1,1 +1,9 @@
 
+from transformers import ViTImageProcessor, ViTForImageClassification
+from PIL import Image
+import requests
+
+# Load pre-trained mod-el
+processor = ViTImageProcessor.from_pretrained("google/vit-base-patch16-224")
+model = ViTForImageClassification.from_pretrained("google/vit-base-patch16-224")
+#########################################################################################
