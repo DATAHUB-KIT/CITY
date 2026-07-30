@@ -103,3 +103,16 @@ print(caption)
 ###########################################
 https://www.rmofspringfield.ca/p/meeting-audio-files
 ##########################################################
+
+!pip install -q openai-whisper
+#!pip install -q google-genai
+!apt-get -qq install ffmpeg
+
+#########################################################
+from google.colab import files
+
+uploaded = files.upload()
+
+audio_file = list(uploaded.keys())[0]
+
+print(audio_file)
