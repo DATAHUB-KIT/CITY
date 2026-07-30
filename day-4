@@ -116,3 +116,14 @@ uploaded = files.upload()
 audio_file = list(uploaded.keys())[0]
 
 print(audio_file)
+#################################################################
+import whisper
+
+model = whisper.load_model("base")
+
+result = model.transcribe(audio_file)
+
+transcript = result["text"]
+
+print(transcript)
+####################################################################
