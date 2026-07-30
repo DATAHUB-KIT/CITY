@@ -33,3 +33,14 @@ image = Image.open(list(uploaded.keys())[0]).convert("RGB")
 
 image
 #############################################################
+from transformers import CLIPProcessor
+from transformers import CLIPModel
+
+model = CLIPModel.from_pretrained(
+    "openai/clip-vit-base-patch32"
+)
+
+processor = CLIPProcessor.from_pretrained(
+    "openai/clip-vit-base-patch32"
+)
+#####################################################
