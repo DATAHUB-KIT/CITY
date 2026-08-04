@@ -15,3 +15,21 @@ text = "    "
 candidate_labels = ["   ","    ","  "]
 classifier(text, candidate_labels)
 ###########################################################
+from transformers import pipeline
+
+# Load text generation pipeline
+generator = pipeline(
+    "text-generation",
+    model="gpt2"
+)
+
+prompt = "Artificial Intelligence is transforming"
+
+result = generator(
+    prompt,
+    max_length=80,
+    num_return_sequences=1
+)
+
+print(result[0]["generated_text"])
+#############################################################
