@@ -16,3 +16,14 @@ François Lafortune, Jr, 7
 
 """
 #######################################################################
+ prompt = f"""
+Summarize the following article:
+
+Constraints:
+• Exactly 60 words
+• Use five bullet points
+• Simple English
+
+{article}
+"""
+##################################################3
