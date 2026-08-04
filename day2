@@ -94,3 +94,12 @@ predicted_class = logits.argmax(-1).item()
 print("Predicted Class:")
 print(model.config.id2label[predicted_class])
 #####################################################################
+from google.colab import files
+from PIL import Image
+
+uploaded = files.upload()
+
+image = Image.open(list(uploaded.keys())[0]).convert("RGB")
+
+image
+###############################################################
