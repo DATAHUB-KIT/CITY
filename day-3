@@ -64,3 +64,43 @@ response = client.chat.completions.create(
 
 print(response.choices[0].message.content)
 #######################################################
+RESUME ANALYSI USING AI
+###############################################
+!pip install -q pymupdf
+###############################################
+from google.colab import files
+
+uploaded = files.upload()
+
+resume_file = list(uploaded.keys())[0]
+###################################################
+import fitz
+
+doc = fitz.open(resume_file)
+
+resume_text = ""
+
+for page in doc:
+    resume_text += page.get_text()
+
+print(resume_text)
+########################################
+prompt = f"""
+You are an experienced HR recruiter and Career Coach.
+
+Analyze the following resume.
+
+Resume:
+
+{resume_text}
+
+Generate:
+
+1. Candidate Summary
+2. Technical Skills
+3. Soft Skills
+4. Resume Score (Out of 100)
+5.Best Job Roles
+
+Return the result in Markdown.
+"""
